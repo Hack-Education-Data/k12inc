@@ -1,0 +1,21 @@
+---
+layout: default
+title: Pre- and Post- K12 Inc
+---
+
+<h2>Other Connections to K12 Inc</h2>
+
+<!-- People -->
+{% assign others = site.data.others %}
+{% assign others = others | sort:"Name" %}
+
+<!-- Document -->
+
+{% for other in other %}
+
+<p><strong>{{ other.Name }}</strong></p> 
+<p>{{ other.Company }}, {{ other.Role }}</p>
+
+<hr >
+{% endfor %}
+
