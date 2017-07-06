@@ -1,0 +1,19 @@
+---
+layout: default
+title: People Involved in K12 Inc
+---
+
+<!-- People -->
+{% assign employees = site.data.employees %}
+{% assign employees = employees | sort:"Name" %}
+
+<!-- Document -->
+
+{% for employee in employees %}
+
+<ul>
+<li><strong>{{ employee.Name }}</strong>, {{ employee.Role }}</li>
+</ul>
+
+{% endfor %}
+
